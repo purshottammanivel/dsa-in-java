@@ -21,15 +21,19 @@ public class LeftRotateByD {
 
         // Step 1. Reverse first d
         reverse(arr, 0, d - 1);
+        System.out.println("Step 1: " + Arrays.toString(arr));
 
         // Step 2. Reverse remaining n-d
         reverse(arr, d, n - 1);
+        System.out.println("Step 2: " + Arrays.toString(arr));
 
         // Step 3. Reverse entire array
         reverse(arr, 0, n - 1);
+        System.out.println("Step 3: " + Arrays.toString(arr));
     }
 
     public static void reverse(int[] arr, int left, int right) {
+        System.out.println("arr: " + arr);
         while (left < right) {
             int temp = arr[left];
             arr[left] = arr[right];
